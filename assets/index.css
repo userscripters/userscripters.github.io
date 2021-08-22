@@ -22,8 +22,8 @@ body {
   text-align: center;
 }
 .org-logo > div:not(.org-title) {
-  width: 10vh;
-  height: 10vh;
+  width: 15vh;
+  height: 15vh;
 }
 .org-logo > div:nth-child(1) {
   background-color: var(--u);
@@ -40,4 +40,44 @@ body {
 .org-logo > div:nth-child(4) {
   background-color: var(--r);
   grid-area: r;
+}
+@media screen and (max-width: 450px) {
+  .org-title {
+    display: none;
+  }
+  .org-logo > div:not(.org-title) {
+    position: relative;
+  }
+  .org-logo > div:not(.org-title)::before {
+    position: absolute;
+    top: 50%;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  .org-logo > div:not(.org-title):nth-child(odd) {
+    justify-self: end;
+  }
+  .org-logo > div:not(.org-title):nth-child(even) {
+    justify-self: start;
+  }
+  .org-logo > div:nth-child(1)::before {
+    color: var(--s);
+    content: "u";
+  }
+  .org-logo > div:nth-child(2)::before {
+    color: var(--u);
+    content: "s";
+  }
+  .org-logo > div:nth-child(3)::before {
+    color: var(--r);
+    content: "e";
+  }
+  .org-logo > div:nth-child(4)::before {
+    color: var(--e);
+    content: "r";
+  }
 }
