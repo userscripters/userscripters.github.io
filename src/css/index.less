@@ -11,25 +11,39 @@ body {
 
 .org-logo {
     display: grid;
-    grid-template-rows: repeat(2, 50%);
+    grid-template-rows: auto;
     grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+        "u s"
+        "title title"
+        "e r";
+    justify-items: center;
 }
 
-.org-logo > div {
+.org-title {
+    grid-area: title;
+    text-align: center;
+}
+
+.org-logo > div:not(.org-title) {
     width: 10vh;
     height: 10vh;
 }
 
 .org-logo > div:nth-child(1) {
     background-color: var(--u);
+    grid-area: u;
 }
 
 .org-logo > div:nth-child(2) {
     background-color: var(--s);
+    grid-area: s;
 }
 .org-logo > div:nth-child(3) {
     background-color: var(--e);
+    grid-area: e;
 }
 .org-logo > div:nth-child(4) {
     background-color: var(--r);
+    grid-area: r;
 }
