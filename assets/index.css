@@ -4,6 +4,9 @@
   --e: #8d81ff;
   --r: #99e227;
 }
+body {
+  margin: 0;
+}
 .org-logo {
   display: grid;
   grid-template-rows: repeat(2, 50%);
@@ -11,7 +14,7 @@
 }
 .org-logo > div {
   width: 10vh;
-  height: 10vw;
+  height: 10vh;
 }
 .org-logo > div:nth-child(1) {
   background-color: var(--u);
