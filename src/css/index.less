@@ -3,6 +3,7 @@
     --s: #f92342;
     --e: #8d81ff;
     --r: #99e227;
+    --logo-chars-size: 4rem;
 }
 
 body {
@@ -58,12 +59,14 @@ body {
 
     .org-logo > div:not(.org-title) {
         position: relative;
+        min-height: var(--logo-chars-size);
+        min-width: var(--logo-chars-size);
     }
 
     .org-logo > div:not(.org-title)::before {
         position: absolute;
         top: 50%;
-        font-size: 4rem;
+        font-size: var(--logo-chars-size);
         font-weight: 600;
         font-family: Helvetica, Arial, sans-serif;
         text-align: center;
