@@ -4,12 +4,22 @@
     --e: #8d81ff;
     --r: #99e227;
     --logo-chars-size: 4rem;
+    --family: Helvetica, Arial, sans-serif;
 }
 
 body {
     margin: 0;
     display: grid;
     height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--family);
 }
 
 .org-logo {
@@ -68,7 +78,7 @@ body {
     .org-logo > div:not(.org-title)::before {
         font-size: var(--logo-chars-size);
         font-weight: 600;
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: var(--family);
         text-align: center;
         line-height: 1;
     }
