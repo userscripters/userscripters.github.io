@@ -47,19 +47,18 @@ body {
     display: none;
   }
   .org-logo > div:not(.org-title) {
-    position: relative;
     min-height: var(--logo-chars-size);
     min-width: var(--logo-chars-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .org-logo > div:not(.org-title)::before {
-    position: absolute;
-    top: 50%;
     font-size: var(--logo-chars-size);
     font-weight: 600;
     font-family: Helvetica, Arial, sans-serif;
     text-align: center;
-    width: 100%;
-    transform: translateY(-50%);
+    line-height: 1;
   }
   .org-logo > div:not(.org-title):nth-child(odd) {
     justify-self: end;
@@ -69,18 +68,18 @@ body {
   }
   .org-logo > div:nth-child(1)::before {
     color: var(--s);
-    content: "u";
+    content: "U";
   }
   .org-logo > div:nth-child(2)::before {
     color: var(--u);
-    content: "s";
+    content: "S";
   }
   .org-logo > div:nth-child(3)::before {
     color: var(--r);
-    content: "e";
+    content: "E";
   }
   .org-logo > div:nth-child(4)::before {
     color: var(--e);
-    content: "r";
+    content: "R";
   }
 }
